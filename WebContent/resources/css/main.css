@@ -1,0 +1,92 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+div#game {
+    margin: 10px 0;
+}
+
+div.kalah {
+    height: 100px;
+    line-height: 90px;
+    text-align: center;
+    position: relative;
+    background-color: #ddd;
+    border: 1px solid transparent;
+}
+
+div.kalah > span.label {
+    position: absolute;
+    top: 5px;
+}
+
+div.kalah > h2 {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+div.pit {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #ddd;
+    border: 1px solid transparent;
+}
+
+div.pit > span.badge {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+div.kalah#kalahp1 > span.label {
+    left: 5px;
+}
+
+div.kalah#kalahp2 > span.label {
+    right: 5px;
+}
+
+/* active player styles */
+div.kalah.active, 
+div.pit.active {
+    background-color: #fafafa;
+}
+
+/* active player styles - player one */
+div.kalah.active#kalahp1 {
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+div.row > div.pit.active[id^="p1"]:last-child {
+    border-right: 1px solid #aaa;
+}
+div.pit.opp-active#p2p0 {
+    border-left: 1px solid #aaa;
+}
+
+div.pit.active[id^="p1"] {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+/* active player styles - player two */
+div.kalah.active#kalahp2 {
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+div.row > div.pit.active[id^="p2"]:first-child {
+    border-left: 1px solid #aaa;
+}
+div.pit.opp-active#p1p0 {
+    border-right: 1px solid #aaa;
+}
+
+div.pit.active[id^="p2"] {
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
